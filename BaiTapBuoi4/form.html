@@ -22,6 +22,7 @@
           required
           placeholder="Nguyễn Văn A"
           autofocus
+          tabindex="1"
         />
         <br />
 
@@ -32,6 +33,7 @@
           type="email"
           required
           placeholder="example@gmail.com"
+          tabindex="2"
         />
         <br />
 
@@ -43,15 +45,17 @@
           required
           minlength="6"
           autocomplete="off"
+          tabindex="3"
         />
         <br />
 
-        <label for="confirm-password">Nhập lại mật khẩu</label>
+        <label for="confirm_password">Nhập lại mật khẩu</label>
         <input
-          id="confirm-password"
-          name="confirm-password"
+          id="confirm_password"
+          name="confirm_password"
           type="password"
           required
+          tabindex="4"
         />
         <br />
 
@@ -62,14 +66,30 @@
           type="tel"
           placeholder="0xxxxxxxxx"
           pattern="0[0-9]{9}"
+          tabindex="5"
         />
         <br />
 
-        <label for="birthday">Ngày sinh</label><
-        <input id="birthday" name="birthday" type="date" required /> <br />
+        <label for="birthday">Ngày sinh</label>
+        <input
+          id="birthday"
+          name="birthday"
+          type="date"
+          required
+          tabindex="6"
+        />
+        <br />
 
         <label for="age">Tuổi</label>
-        <input id="age" name="age" type="number" min="1" max="120" /> <br />
+        <input
+          id="age"
+          name="age"
+          type="number"
+          min="1"
+          max="120"
+          tabindex="7"
+        />
+        <br />
 
         <label for="website">Website cá nhân</label>
         <input
@@ -77,14 +97,16 @@
           name="website"
           type="url"
           placeholder="https://..."
+          tabindex="8"
         />
         <br />
-        <label for="Address">Địa chỉ</label>
+        <label for="address">Địa chỉ</label>
         <input
-          id="Address"
-          name="Address"
+          id="address"
+          name="address"
           type="text"
           placeholder="Số nhà, phường/xã"
+          tabindex="9"
         />
         <br />
         <label for="zipcode">Mã bưu chính</label>
@@ -94,6 +116,7 @@
           type="text"
           maxlength="6"
           placeholder="700000"
+          tabindex="10"
         />
         <br />
       </fieldset>
@@ -103,7 +126,14 @@
         <div>
           <label><b>Giới tính</b></label
           ><br />
-          <input id="Male" name="gender" type="radio" required value="Male" />
+          <input
+            id="Male"
+            name="gender"
+            type="radio"
+            required
+            value="Male"
+            tabindex="11"
+          />
           <label for="Male">Nam</label>
           <input
             id="Female"
@@ -111,35 +141,69 @@
             type="radio"
             required
             value="Female"
+            tabindex="12"
           />
           <label for="Female">Nữ</label>
-          <input id="Other" name="gender" type="radio" required value="Other" />
+          <input
+            id="Other"
+            name="gender"
+            type="radio"
+            required
+            value="Other"
+            tabindex="13"
+          />
           <label for="Other">Khác</label>
         </div>
         <div>
           <label><b>Sở thích</b></label
           ><br />
-          <input id="doc-sach" name="hobby" type="checkbox" value="doc-sach" />
+          <input
+            id="doc-sach"
+            name="hobby"
+            type="checkbox"
+            value="doc-sach"
+            tabindex="14"
+          />
           <label for="doc-sach">Đọc sách</label><br />
           <input
             id="nghe-nhac"
             name="hobby"
             type="checkbox"
             value="nghe-nhac"
+            tabindex="15"
           />
           <label for="nghe-nhac">Nghe nhạc</label><br />
-          <input id="du-lich" name="hobby" type="checkbox" value="du-lich" />
+          <input
+            id="du-lich"
+            name="hobby"
+            type="checkbox"
+            value="du-lich"
+            tabindex="16"
+          />
           <label for="du-lich">Du lịch</label><br />
           <input
             id="lap-trinh"
             name="hobby"
             type="checkbox"
             value="lap-trinh"
+            tabindex="17"
           />
           <label for="lap-trinh">Lập trình</label><br />
-          <input id="nau-an" name="hobby" type="checkbox" value="nau-an" />
+          <input
+            id="nau-an"
+            name="hobby"
+            type="checkbox"
+            value="nau-an"
+            tabindex="18"
+          />
           <label for="nau-an">Nấu ăn</label><br />
-          <input id="the-thao" name="hobby" type="checkbox" value="the-thao" />
+          <input
+            id="the-thao"
+            name="hobby"
+            type="checkbox"
+            value="the-thao"
+            tabindex="19"
+          />
           <label for="the-thao">Thể thao</label><br />
         </div>
         <div>
@@ -182,34 +246,71 @@
         <div>
           <label><b>Khoá học quan tâm</b></label
           ><br />
-          <input id="HTML-CSS" name="course" type="checkbox" value="HTML-CSS" />
+          <input
+            id="HTML-CSS"
+            name="course"
+            type="checkbox"
+            value="HTML-CSS"
+            tabindex="20"
+          />
           <label for="HTML-CSS">HTML-CSS</label><br />
           <input
             id="JavaScript"
             name="course"
             type="checkbox"
             value="JavaScript"
+            tabindex="21"
           />
           <label for="JavaScript">JavaScript</label><br />
-          <input id="ReactJS" name="course" type="checkbox" value="ReactJS" />
+          <input
+            id="ReactJS"
+            name="course"
+            type="checkbox"
+            value="ReactJS"
+            tabindex="22"
+          />
           <label for="ReactJS">ReactJS</label><br />
-          <input id="NodeJS" name="course" type="checkbox" value="NodeJS" />
+          <input
+            id="NodeJS"
+            name="course"
+            type="checkbox"
+            value="NodeJS"
+            tabindex="23"
+          />
           <label for="NodeJS">NodeJS</label><br />
-          <input id="Python" name="course" type="checkbox" value="Python" />
+          <input
+            id="Python"
+            name="course"
+            type="checkbox"
+            value="Python"
+            tabindex="24"
+          />
           <label for="Python">Python</label><br />
         </div>
 
         <div>
           <label><b>Hình thức học</b></label
           ><br />
-          <input id="Online" name="study-type" type="radio" value="Online" />
+          <input
+            id="Online"
+            name="study_type"
+            type="radio"
+            value="Online"
+            tabindex="25"
+          />
           <label for="Online">Online</label>
-          <input id="Offline" name="study-type" type="radio" value="Offline" />
+          <input
+            id="Offline"
+            name="study_type"
+            type="radio"
+            value="Offline"
+            tabindex="26"
+          />
           <label for="Offline">Offline</label>
         </div>
 
         <div>
-          <label><b>Giới thiệu bản thân</b></label
+          <label for="bio"><b>Giới thiệu bản thân</b></label
           ><br />
           <textarea
             name="bio"
@@ -220,15 +321,27 @@
         </div>
 
         <div>
-          <label><b>Ảnh đại diện</b></label
+          <label for="avatar"><b>Ảnh đại diện</b></label
           ><br />
-          <input type="file" name="avatar" accept=".jpg, .png" />
+          <input
+            id="avatar"
+            type="file"
+            name="avatar"
+            accept=".jpg, .png"
+            tabindex="27"
+          />
         </div>
 
         <div>
-          <label><b>CV/ Hồ sơ</b></label
+          <label for="cv"><b>CV/ Hồ sơ</b></label
           ><br />
-          <input type="file" name="cv" accept=".pdf, .doc, .docx" />
+          <input
+            id="cv"
+            type="file"
+            name="cv"
+            accept=".pdf, .doc, .docx"
+            tabindex="28"
+          />
         </div>
       </fieldset>
 
@@ -236,7 +349,13 @@
         <legend>Nhóm 3 - Input đặc biệt</legend>
         <div>
           <label for="fav_color">Màu yêu thích</label>
-          <input type="color" name="fav_color" id="fav_color" value="#ff6600" />
+          <input
+            type="color"
+            name="fav_color"
+            id="fav_color"
+            value="#ff6600"
+            tabindex="29"
+          />
         </div>
 
         <div>
@@ -248,27 +367,39 @@
             min="0"
             max="10"
             value="5"
+            tabindex="30"
+            disabled
           />
         </div>
 
         <div>
           <label for="study_time">Giờ học trong ngày</label>
-          <input type="time" name="study_time" id="study_time" />
+          <input type="time" name="study_time" id="study_time" tabindex="31" />
         </div>
 
         <div>
           <label for="start_month">Tháng bắt đầu học</label>
-          <input type="month" name="start_month" id="start_month" />
+          <input
+            type="month"
+            name="start_month"
+            id="start_month"
+            tabindex="32"
+          />
         </div>
 
         <div>
           <label for="start_week">Tuần bắt đầu học</label>
-          <input type="week" name="start_week" id="start_week" />
+          <input type="week" name="start_week" id="start_week" tabindex="33" />
         </div>
 
         <div>
           <label for="register_at">Ngày & giờ đăng ký</label>
-          <input type="datetime-local" name="register_at" id="register_at" />
+          <input
+            type="datetime-local"
+            name="register_at"
+            id="register_at"
+            tabindex="34"
+          />
         </div>
 
         <div>
@@ -278,6 +409,7 @@
             name="search_course"
             id="search_course"
             placeholder="Nhập tên khóa học..."
+            tabindex="35"
           />
         </div>
 
@@ -290,6 +422,7 @@
             min="0"
             max="50"
             step="1"
+            tabindex="36"
           />
         </div>
 
@@ -303,6 +436,7 @@
             max="5000000"
             step="100000"
             value="1000000"
+            tabindex="37"
           />
         </div>
 
@@ -313,6 +447,8 @@
             name="fav_lang"
             id="fav_lang"
             placeholder="VD: JavaScript, Python..."
+            tabindex="38"
+            readonly
           />
         </div>
       </fieldset>
@@ -320,17 +456,33 @@
       <fieldset>
         <legend>Nhóm 4 - Xác nhận và điều khoản</legend>
         <div>
-          <input type="checkbox" name="agree_terms" id="agree_terms" required />
+          <input
+            type="checkbox"
+            name="agree_terms"
+            id="agree_terms"
+            required
+            tabindex="39"
+          />
           <label for="agree_terms">Tôi đồng ý với điều khoản sử dụng</label>
         </div>
 
         <div>
-          <input type="checkbox" name="subscribe" id="subscribe" />
+          <input
+            type="checkbox"
+            name="subscribe"
+            id="subscribe"
+            tabindex="40"
+          />
           <label for="subscribe">Nhận thông báo qua email</label>
         </div>
 
         <div>
-          <input type="checkbox" name="sms_notify" id="sms_notify" />
+          <input
+            type="checkbox"
+            name="sms_notify"
+            id="sms_notify"
+            tabindex="41"
+          />
           <label for="sms_notify">Nhận thông báo qua SMS</label>
         </div>
 
@@ -341,17 +493,21 @@
             name="ref_code"
             id="ref_code"
             placeholder="Nhập mã nếu có"
-            value="ref_code"
+            tabindex="42"
           />
         </div>
 
-        <input type="hidden" name="course_id" value="F8_2024" /><br />
-        <input type="hidden" name="utm_source" value="website" />
+        <input type="hidden" name="course_id" value="F8_2024" /><br
+          tabindex="43"
+        />
+        <input type="hidden" name="utm_source" value="website" tabindex="44" />
       </fieldset>
 
       <fieldset>
-        <input type="submit" value="Đăng ký ngay" /> Nút gửi form <br />
-        <input type="submit" value="Nhập lại" /> Xoá toàn bộ dữ liệu <br />
+        <input type="submit" value="Đăng ký ngay" /> Nút gửi form
+        <br tabindex="45" />
+        <input type="reset" value="Nhập lại" /> Xoá toàn bộ dữ liệu
+        <br tabindex="46" />
       </fieldset>
     </form>
   </body>
