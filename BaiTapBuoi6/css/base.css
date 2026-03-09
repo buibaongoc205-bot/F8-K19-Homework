@@ -1,0 +1,33 @@
+h1 {
+  color: rgb(155, 2, 22);
+}
+h2 {
+  color: rgb(233, 82, 110);
+}
+h3 {
+  color: rgb(141, 71, 85);
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+.title {
+  color: rgb(152, 68, 4);
+}
+.section {
+  color: rgb(160, 106, 6);
+}
+.highlight {
+  color: rgb(255, 247, 0);
+}
+.big {
+  color: orange;
+}
+
+#main {
+  color: rgb(131, 53, 127);
+}
+#special {
+  color: rgb(252, 1, 231);
+}
