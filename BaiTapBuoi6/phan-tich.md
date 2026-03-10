@@ -1,4 +1,4 @@
-<!-- 
+
 Câu 1: Selector nào có độ ưu tiên cao nhất trong CSS?
 Trả lời: inline style
 
@@ -29,4 +29,3 @@ Trả lời:
   Selector thang: inline style vi css trực tiếp trên cùng dòng code của html
   Mau hien thi: red
 
--->
