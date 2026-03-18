@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <h2 class="header">Trung tâm cấu hình giao diện Demo</h2>
+      <!-- THEME -->
+
+      <p class="groupTitle">Chọn giao diện (Theme)</p>
+      <input id="light" type="radio" name="theme" />
+      <label for="light" class="light">Light</label>
+
+      <input id="dark" type="radio" name="theme" />
+      <label for="dark" class="dark">Dark</label>
+
+      <!-- COLOR -->
+      <p class="groupTitle">Chọn màu chủ đạo (Color)</p>
+      <input id="red" type="radio" name="color" />
+      <label for="red" class="red">Red</label>
+
+      <input id="blue" type="radio" name="color" />
+      <label for="blue" class="blue">Blue</label>
+
+      <input id="green" type="radio" name="color" />
+      <label for="green" class="green">Green</label>
+
+      <!-- LANG -->
+      <p class="groupTitle">Chọn ngôn ngữ (Language)</p>
+      <input id="vi" type="radio" name="lang" />
+      <label for="vi" class="vi">VI</label>
+
+      <input id="en" type="radio" name="lang" />
+      <label for="en" class="en">EN</label>
+
+      <!-- OPTIONS -->
+      <p class="groupTitle">Tuỳ chọn bổ sung (Options -Checkbox)</p>
+      <input id="advanced" type="checkbox" name="options" />
+      <label for="advanced" class="advanced">Hiển thị mô tả nâng cao</label>
+
+      <input id="eco" type="checkbox" name="options" />
+      <label for="eco" class="eco">Bật chế độ Eco</label>
+
+      <input id="warning" type="checkbox" name="options" />
+      <label for="warning" class="warning">Hiển thị cảnh báo quan trọng</label>
+
+      <div class="content">
+        <p class="light-content content-default">
+          Theme Light: Giao diện sáng, chữ đen
+        </p>
+        <p class="dark-content content-default">
+          Theme Dark: Giao diện tối, chữ sáng
+        </p>
+        <p class="red-content content-default">
+          Màu Red được nhấn mạnh khi chọn Red
+        </p>
+        <p class="blue-content content-default">
+          Màu Blue được nhấn mạnh khi chọn Blue
+        </p>
+        <p class="green-content content-default">
+          Màu Green được nhấn mạnh khi chọn Green
+        </p>
+
+        <p class="vi-content content-default">
+          [VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.
+        </p>
+        <p class="en-content content-default">
+          [EN] Xin chào bạn! Khi chọn EN, dòng này rõ hơn.
+        </p>
+
+        <p class="advanced-content content-default">
+          Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng
+          giao diện.
+        </p>
+        <p class="eco-content content-default">
+          Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.
+        </p>
+        <p class="warning-content content-default">
+          Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
