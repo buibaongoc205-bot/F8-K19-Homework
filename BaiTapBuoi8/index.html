@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+
+      .main {
+        display: flex;
+        background: #eee;
+        border-radius: 20px;
+        margin: 10px;
+      }
+
+      /* Control panel */
+      .control-panel label {
+        background: #ddd;
+        padding: 6px 10px;
+        margin-right: 6px;
+        margin-top: 10px;
+      }
+
+      .control-panel {
+        width: 35vw;
+        background: #f5f5f5;
+        margin: 15px 0;
+        padding: 20px;
+      }
+      .profile {
+        margin-top: 4px;
+      }
+      .p-title {
+        margin-top: 30px;
+      }
+
+      /* Preview area */
+      .preview-area {
+        width: 65vw;
+        margin-left: 15px;
+      }
+
+      .preview {
+        height: 100vh;
+        padding: 10px;
+        margin-top: -10px;
+      }
+
+      .preview span {
+        margin-right: 8px;
+      }
+      .preview .skills-option span {
+        background: #f0f0f0;
+        padding: 4px 8px;
+      }
+
+      .btn {
+        padding: 10px 30px;
+        margin-top: 30px;
+        border: none;
+      }
+
+      .preview p {
+        margin-top: 30px;
+      }
+
+      p.job {
+        margin-top: -12px;
+      }
+      .skills,
+      .hobbit {
+        font-size: 0.9em;
+      }
+
+      .btn {
+        display: block;
+      }
+      /* ACTIVE*/
+      /* theme color active */
+      #light:checked ~ .preview-area > .preview {
+        background: white;
+      }
+      #gray:checked ~ .preview-area > .preview {
+        background: lightgray;
+      }
+      #yellow:checked ~ .preview-area > .preview {
+        background: lightyellow;
+      }
+      #blue:checked ~ .preview-area > .preview {
+        background: lightblue;
+      }
+      #pink:checked ~ .preview-area > .preview {
+        background: pink;
+      }
+      /* namesize active */
+      #small:checked ~ .preview-area > .preview > h1 {
+        font-size: 1.3rem;
+      }
+
+      #large:checked ~ .preview-area > .preview > h1 {
+        font-size: 6rem;
+      }
+
+      /* namstyle active */
+      #uppercase:checked ~ .preview-area > .preview > h1 {
+        text-transform: uppercase;
+      }
+
+      /* namecolor active */
+      #dark:checked ~ .preview-area > .preview > h1 {
+        color: black;
+      }
+      #blue-name:checked ~ .preview-area > .preview > h1 {
+        color: blue;
+      }
+      #green:checked ~ .preview-area > .preview > h1 {
+        color: green;
+      }
+      #red:checked ~ .preview-area > .preview > h1 {
+        color: red;
+      }
+
+      /* indent active */
+      #center:checked ~ .preview-area > .preview {
+        text-align: center;
+      }
+      #right:checked ~ .preview-area > .preview {
+        text-align: right;
+      }
+
+      /* jobsize active */
+      #small-job:checked ~ .preview-area > .preview > .job {
+        font-size: small;
+      }
+
+      #large-job:checked ~ .preview-area > .preview > .job {
+        font-size: large;
+      }
+
+      /* job-spacing active */
+      #tight:checked ~ .preview-area > .preview > .job {
+        word-spacing: -0.2em;
+      }
+      #normal:checked ~ .preview-area > .preview > .job {
+        word-spacing: normal;
+      }
+      #wide:checked ~ .preview-area > .preview > .job {
+        word-spacing: 0.5em;
+      }
+
+      /* descsize active */
+      #small-describe:checked ~ .preview-area > .preview > .desc {
+        font-size: small;
+      }
+      #large-describe:checked ~ .preview-area > .preview > .desc {
+        font-size: large;
+      }
+
+      /* describe-spacing active */
+      #tight-describe:checked ~ .preview-area > .preview > .desc {
+        line-height: 1.2em;
+      }
+      #normal-describe:checked ~ .preview-area > .preview > .desc {
+        line-height: 1.6em;
+      }
+      #loose-describe:checked ~ .preview-area > .preview > .desc {
+        line-height: 2.5em;
+      }
+      /* btn active */
+      #dark-btn:checked ~ .preview-area > .preview > .btn {
+        background: #1a1a1a;
+        color: #f0f0f0;
+      }
+      #blue-btn:checked ~ .preview-area > .preview > .btn {
+        background: blue;
+        color: #f0f0f0;
+      }
+      #light-btn:checked ~ .preview-area > .preview > .btn {
+        background: #f5f5f5;
+        color: #1a1a1a;
+      }
+      .btn {
+        display: inline-block;
+      }
+
+      #light:checked ~ .control-panel .light-label,
+      #gray:checked ~ .control-panel .gray-label,
+      #yellow:checked ~ .control-panel .yellow-label,
+      #blue:checked ~ .control-panel .blue-label,
+      #pink:checked ~ .control-panel .pink-label,
+      #small:checked ~ .control-panel .small-label,
+      #medium:checked ~ .control-panel .medium-label,
+      #large:checked ~ .control-panel .large-label,
+      #normal:checked ~ .control-panel .normal-label,
+      #uppercase:checked ~ .control-panel .uppercase-label,
+      #dark:checked ~ .control-panel .dark-label,
+      #blue-name:checked ~ .control-panel .blue-name-label,
+      #green:checked ~ .control-panel .green-label,
+      #red:checked ~ .control-panel .red-label,
+      #left:checked ~ .control-panel .left-label,
+      #center:checked ~ .control-panel .center-label,
+      #right:checked ~ .control-panel .right-label,
+      #small-job:checked ~ .control-panel .small-job-label,
+      #medium-job:checked ~ .control-panel .medium-job-label,
+      #large-job:checked ~ .control-panel .large-job-label,
+      #tight:checked ~ .control-panel .tight-label,
+      #normal:checked ~ .control-panel .normal-label,
+      #wide:checked ~ .control-panel .wide-label,
+      #small-describe:checked ~ .control-panel .small-describe-label,
+      #medium-describe:checked ~ .control-panel .medium-describe-label,
+      #large-describe:checked ~ .control-panel .large-describe-label,
+      #tight-describe:checked ~ .control-panel .tight-describe-label,
+      #normal-describe:checked ~ .control-panel .normal-describe-label,
+      #loose-describe:checked ~ .control-panel .loose-describe-label,
+      #dark-btn:checked ~ .control-panel .dark-btn-label,
+      #blue-btn:checked ~ .control-panel .blue-btn-label,
+      #light-btn:checked ~ .control-panel .light-btn-label {
+        font-weight: 900;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main">
+      <!-- theme color input -->
+      <input id="light" type="radio" name="theme-color" hidden />
+      <input id="gray" type="radio" name="theme-color" hidden />
+      <input id="yellow" type="radio" name="theme-color" hidden />
+      <input id="blue" type="radio" name="theme-color" hidden />
+      <input id="pink" type="radio" name="theme-color" hidden />
+      <!-- namesize input -->
+      <input id="small" type="radio" name="namesize" hidden />
+      <input id="medium" type="radio" name="namesize" hidden />
+      <input id="large" type="radio" name="namesize" hidden />
+      <!-- namestyle input -->
+      <input id="normal" type="radio" name="namestyle" hidden />
+      <input id="uppercase" type="radio" name="namestyle" hidden />
+      <!-- namecolor input -->
+      <input id="dark" type="radio" name="namecolor" hidden />
+      <input id="blue-name" type="radio" name="namecolor" hidden />
+      <input id="green" type="radio" name="namecolor" hidden />
+      <input id="red" type="radio" name="namecolor" hidden />
+      <!-- indenstyle input -->
+      <input id="left" type="radio" name="indentstyle" hidden />
+      <input id="center" type="radio" name="indentstyle" hidden />
+      <input id="right" type="radio" name="indentstyle" hidden />
+      <!-- jobsize input -->
+      <input id="small-job" type="radio" name="jobsize" hidden />
+      <input id="medium-job" type="radio" name="jobsize" hidden />
+      <input id="large-job" type="radio" name="jobsize" hidden />
+      <!-- jobspacing input -->
+      <input id="tight" type="radio" name="jobspacing" hidden />
+      <input id="normal" type="radio" name="jobspacing" hidden />
+      <input id="wide" type="radio" name="jobspacing" hidden />
+      <!-- describe input -->
+      <input id="small-describe" type="radio" name="describe" hidden />
+      <input id="medium-describe" type="radio" name="describe" hidden />
+      <input id="large-describe" type="radio" name="describe" hidden />
+      <!-- describe-spacing input -->
+      <input id="tight-describe" type="radio" name="describe-spacing" hidden />
+      <input id="normal-describe" type="radio" name="describe-spacing" hidden />
+      <input id="loose-describe" type="radio" name="describe-spacing" hidden />
+      <!-- btn-color input -->
+      <input id="dark-btn" type="radio" name="btn-color" hidden />
+      <input id="blue-btn" type="radio" name="btn-color" hidden />
+      <input id="light-btn" type="radio" name="btn-color" hidden />
+
+      <!-- ========== CONTROL PANEL ========== -->
+      <div class="control-panel">
+        <p class="profile">Tuỳ chỉnh hồ sơ</p>
+        <!-- theme color label -->
+        <p class="p-title">1. Màu nền hồ sơ</p>
+        <label for="light" class="light-label">Light</label>
+        <label for="gray" class="gray-label">Gray</label>
+        <label for="yellow" class="yellow-label">Yellow</label>
+        <label for="blue" class="blue-label">Blue</label>
+        <label for="pink" class="pink-label">Pink</label>
+        <!-- namesize label -->
+        <p class="p-title">2. Kích thước tên</p>
+        <label for="small" class="small-label">Small</label>
+        <label for="medium" class="medium-label">Medium</label>
+        <label for="large" class="large-label">Large</label>
+        <!-- namestyle label -->
+        <p class="p-title">3. Kiểu chữ tên</p>
+        <label for="normal" class="normal-label">Normal</label>
+        <label for="uppercase" class="uppercase-label">Uppercase</label>
+        <!-- namecolor label -->
+        <p class="p-title">4. Màu chữ tên</p>
+        <label for="dark" class="dark-label">Dark</label>
+        <label for="blue-name" class="blue-name-label">Blue</label>
+        <label for="green" class="green-label">Green</label>
+        <label for="red" class="red-label">Red</label>
+        <!-- indentstyle label -->
+        <p class="p-title">5. Căn lề hồ sơ</p>
+        <label for="left" class="left-label">Left</label>
+        <label for="center" class="center-label">Center</label>
+        <label for="right" class="right-label">Right</label>
+        <!-- jobsize label -->
+        <p class="p-title">6. Kích thước nghề nghiệp</p>
+        <label for="small-job" class="small-job-label">Small</label>
+        <label for="medium-job" class="medium-job-label">Medium</label>
+        <label for="large-job" class="large-job-label">Large</label>
+        <!-- jobspacing label -->
+        <p class="p-title">7. Khoảng cách chữ nghề nghiệp</p>
+        <label for="tight" class="tight-label">Tight</label>
+        <label for="normal" class="normal-label">Normal</label>
+        <label for="wide" class="wide-label">Wide</label>
+        <!-- describe label -->
+        <p class="p-title">8. Kích thước mô tả</p>
+        <label for="small-describe" class="small-describe-label">Small</label>
+        <label for="medium-describe" class="medium-describe-label"
+          >Medium</label
+        >
+        <label for="large-describe" class="large-describe-label">Large</label>
+        <!-- describe-spacing label -->
+        <p class="p-title">9. Giãn dòng mô tả</p>
+        <label for="tight-describe" class="tight-describe-label">Tight</label>
+        <label for="normal-describe" class="normal-describe-label"
+          >Normal</label
+        >
+        <label for="loose-describe" class="loose-describe-label">Loose</label>
+        <!-- btn-color label -->
+        <p class="p-title">10. Màu nút liên hệ</p>
+        <label for="dark-btn" class="dark-btn-label">Dark</label>
+        <label for="blue-btn" class="blue-btn-label">Blue</label>
+        <label for="light-btn" class="light-btn-label">Light</label>
+      </div>
+
+      <!-- ========== PREVIEW AREA ========== -->
+      <div class="preview-area">
+        <p class="preview-area-title">Preview hồ sơ cá nhân</p>
+        <div class="preview">
+          <h1>Nguyễn Minh Khoa</h1>
+          <p class="job">Frontend Developer: Ho Chi Minh City</p>
+          <p class="desc">
+            Tôi là một lập trinhg viên Frontend với hơn 3 năm kinh nghiệm xây
+            dựng giao diện web hiện đại, tập trung vào hiệu suất và trải nghiệm
+            người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm
+            thực tế
+          </p>
+
+          <p class="skills">Kỹ năng</p>
+          <div class="skills-option">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Figma</span>
+            <span>Git</span>
+          </div>
+
+          <p class="hobbit">Sở thích</p>
+          <div class="hobbit-option">
+            <span>Nhiếp ảnh</span>
+            <span>Đọc sách</span>
+            <span>Du lịch</span>
+            <span>Cà phê</span>
+          </div>
+
+          <button class="btn">Liên hệ với tôi</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
