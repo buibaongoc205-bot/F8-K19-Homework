@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .open-btn {
+        padding: 12px 20px;
+        background: #ccc;
+      }
+      .overlay {
+        background: #ccc;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+      }
+      .modal {
+        height: 100px;
+        width: 250px;
+        background: #fff;
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+
+      #modal-toggle:checked ~ .overlay {
+        display: block;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <input id="modal-toggle" type="checkbox" hidden />
+    <label for="modal-toggle" class="open-btn">Bam vao day</label>
+
+    <div class="overlay">
+      <div class="modal">
+        <p>Day la noi dung thong bao</p>
+        <button class="close-btn">Dong</button>
+      </div>
+    </div>
+  </body>
+</html>
